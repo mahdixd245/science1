@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>science</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تجربة مندل على الذباب 🦟</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .calculate-btn {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .calculate-btn:hover {
+            background-color: #ffcc00;
+            transform: scale(1.05);
+        }
+        #results {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .show-results {
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧬 تجربة مندل على الذباب 🦟</h1>
+        <div class="box">
+            <h2>اختر صفات الأبوين</h2>
+            <div class="row">
+                <label>👦 لون عين الذكر:</label>
+                <select id="eye-male">
+                    <option>أحمر (سائد)</option>
+                    <option>أبيض (متنحٍ)</option>
+                </select>
+                <label>👩 لون عين الأنثى:</label>
+                <select id="eye-female">
+                    <option>أحمر (سائد)</option>
+                    <option>أبيض (متنحٍ)</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>🦟 لون جسم الذكر:</label>
+                <select id="body-male">
+                    <option>رمادي (سائد)</option>
+                    <option>أسود (متنحٍ)</option>
+                </select>
+                <label>🦟 لون جسم الأنثى:</label>
+                <select id="body-female">
+                    <option>رمادي (سائد)</option>
+                    <option>أسود (متنحٍ)</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>🦟 شكل الجناح عند الذكر:</label>
+                <select id="wing-male">
+                    <option>طبيعي (سائد)</option>
+                    <option>متعرج (متنحٍ)</option>
+                </select>
+                <label>🦟 شكل الجناح عند الأنثى:</label>
+                <select id="wing-female">
+                    <option>طبيعي (سائد)</option>
+                    <option>متعرج (متنحٍ)</option>
+                </select>
+            </div>
+            <button class="calculate-btn" onclick="calculateResults()">احسب الاحتمالات 🖩</button>
+            <div id="results"></div>
+        </div>
+    </div>
+    <div class="watermark">© رباحة مهدي</div>
+    <script>
+        function calculateResults() {
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.classList.add("show-results");
+            resultsDiv.innerHTML = "<p>🎲 حساب الاحتمالات...</p>"; 
+        }
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
