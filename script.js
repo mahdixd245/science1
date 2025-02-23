@@ -63,8 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.querySelector(".calculate-btn").addEventListener("click", calculateResults);
 });
-
-  }
   
   
   
